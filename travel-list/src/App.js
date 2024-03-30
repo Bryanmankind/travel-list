@@ -20,8 +20,9 @@ function Logo() {
 }
 
 function Form() {
+  function handlsubmit() {}
   return (
-    <div className="add-form">
+    <form className="add-form" onSubmit={handlsubmit}>
       <h3>What do you need for your trip 👜</h3>
       <select>
         {Array.from({ length: 20 }, (_, i) => i + 1).map((num) => (
@@ -32,7 +33,7 @@ function Form() {
       </select>
       <input type="text" placeholder="items...." />
       <button>Add</button>
-    </div>
+    </form>
   );
 }
 
