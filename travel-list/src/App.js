@@ -20,7 +20,9 @@ function Logo() {
 }
 
 function Form() {
-  function handlsubmit() {}
+  function handlsubmit(e) {
+    e.preventDefult();
+  }
   return (
     <form className="add-form" onSubmit={handlsubmit}>
       <h3>What do you need for your trip 👜</h3>
