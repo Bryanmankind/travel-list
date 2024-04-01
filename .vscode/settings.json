@@ -1,0 +1,6 @@
+{
+    "workbench.editor.preferHistoryBasedLanguageDetection": true,
+    "extensions.closeExtensionDetailsOnViewChange": true,
+    "prettier.resolveGlobalModules": false,
+    "prettier.withNodeModules": false
+}
