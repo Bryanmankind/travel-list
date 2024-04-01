@@ -25,7 +25,11 @@ function Logo() {
 function Form() {
   const [description, setDescription ] = useState("");
   const [quantity, setQuantity ] = useState(1);
-  const [items, setItems ] = useState(1);
+  const [items, setItems ] = useState([]);
+
+  function handleAddIteams (item) {
+    setItems((items) => [...items, item])
+  }
 
   function handlsubmit(e) {
     e.preventDefault();
@@ -33,6 +37,8 @@ function Form() {
     if (!description) return;
     const newItem = {description, quantity, packed:false, id:Date.now()};
     console.log(newItem);
+
+    handleAddIteams(newItem);
 
     setDescription("");
     setQuantity("");
