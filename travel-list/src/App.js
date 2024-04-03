@@ -82,6 +82,7 @@ function PackingList({items, onDeletItem}) {
 function List({ items, onDeletItem }) {
   return (
     <li>
+      <input type="checkbox"/>
       <span style={items.packed ? { textDecoration: "line-through" } : {}}>
         {items.quantity}
         {items.description}
