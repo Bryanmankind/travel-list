@@ -1,8 +1,8 @@
 import {useState} from "react";
-import { Form } from "./Form";
-import { Stats } from "./Stats";
-import { PackingList } from "./PackingList";
-import { Logo } from "./Logo";
+import { Form } from "./component/Form";
+import { Stats } from "./component/Stats";
+import { PackingList } from "./component/PackingList";
+import { Logo } from "./component/Logo";
 
 
 export default function App() {
