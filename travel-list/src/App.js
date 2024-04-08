@@ -1,12 +1,6 @@
 import {useState} from "react";
 
 
-// const initialItems = [
-//   { id: 1, description: "Passports", quantity: 2, packed: true },
-//   { id: 2, description: "Socks", quantity: 12, packed: false },
-//   { id: 3, description: "Chager", quantity: 1, packed: true },
-// ];
-
 export default function App() {
   const [items, setItems ] = useState([]);
 
@@ -78,7 +72,7 @@ function PackingList({items, onDeletItem, onHandleToggleitem}) {
     <div className="list">
       <ul>
         {items.map((item) => (
-          <List items={item} onDeletItem={onDeletItem} onHandleToggleitem={handleToggleitem} key={item.id} />
+          <List items={item} onDeletItem={onDeletItem} onHandleToggleitem={onHandleToggleitem} key={item.id} />
         ))}
       </ul>
     </div>
@@ -88,7 +82,7 @@ function PackingList({items, onDeletItem, onHandleToggleitem}) {
 function List({ items, onDeletItem, onHandleToggleitem }) {
   return (
     <li>
-      <input type="checkbox" value={item.packed} onChange={() => {}}/>
+      <input type="checkbox" value={items.packed} onChange={() => {}}/>
       <span style={items.packed ? { textDecoration: "line-through" } : {}}>
         {items.quantity}
         {items.description}
