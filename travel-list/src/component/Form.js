@@ -8,9 +8,7 @@ export function Form({ onAdditems }) {
     e.preventDefault();
 
     if (!description) return;
-    const newItem = { description, quantity, packed: false, id: Date.now() };
-    console.log(newItem);
-
+    const newItem = { description, quantity, packed: false, id: Date.now() }
     onAdditems(newItem);
 
     setDescription("");
